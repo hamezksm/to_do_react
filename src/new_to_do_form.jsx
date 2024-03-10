@@ -1,15 +1,13 @@
 import { useState } from "react";
 
-export function NewToDoForm({onSubmit}) { //passing props in a bundle{}
+export function NewToDoForm({ onSubmit }) {
+  //passing props in a bundle{}
   const [newItem, setNewItem] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault(); //prevents page from refreshing.
-
-    if (newItem === "")return
-
+    if (newItem === "") return;
     onSubmit(newItem);
-
     setNewItem("");
   }
 
